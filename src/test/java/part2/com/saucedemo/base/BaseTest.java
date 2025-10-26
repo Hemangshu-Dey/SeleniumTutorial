@@ -1,6 +1,6 @@
 package part2.com.saucedemo.base;
 
-import com.saucedemo.pages.BasePage;
+import com.base.BasePage;
 import com.saucedemo.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,5 +26,13 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         driver.quit();
+    }
+
+    public static void delay(int milliseconds) {
+        try{
+            Thread.sleep(milliseconds);
+        }catch (InterruptedException exc) {
+            exc.printStackTrace();
+        }
     }
 }
